@@ -5,6 +5,7 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: gray;
 }
 
 code {
@@ -71,5 +72,25 @@ code {
 
     /*사용할 폰트 기본 스타일 */
     font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-display: fallback;
+
+    /* 
+  src: 사용할 폰트의 위치 및 형식 
+     Safari, Android, iOS => ttf
+     Modern Browsers => woff
+     IE6-IE8 => eot
+*/
+
+    src: url('./fonts/Pretendard-Regular.otf') format('opentype'),
+        url('./fonts/Pretendard-Regular.woff') format('woff'),
+        url('./fonts/Pretendard-Regular.ttf') format('truetype');
+
+    /*사용할 폰트 기본 스타일 */
+    font-weight: 400;
     font-style: normal;
 }
