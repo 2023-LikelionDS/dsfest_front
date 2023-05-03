@@ -9,12 +9,22 @@ function NoticeList() {
     const handlePageChange = (page) => {
         setPage(page);
     };
+
+    const onClickToDetail = () => {
+        window.location.href = '/detail';
+        // 나중에 id 값 추가
+    };
     return (
         <div className="ListContainer">
             <div className="noticeCount">6개의 게시물</div>
             <Container>
                 <Row>
-                    <Col className="col" sm={6} xs={6}>
+                    <Col
+                        className="col"
+                        sm={6}
+                        xs={6}
+                        onClick={onClickToDetail}
+                    >
                         <div className="noticeImg"></div>
                         <div className="noticeTitle">
                             <div>제목임당~</div>
