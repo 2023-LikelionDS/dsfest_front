@@ -23,7 +23,7 @@ function NoticeDetail() {
                     <div>
                         <div className="detailTitle">공지사항제목</div>
 
-                        <div className="noticeDate">2000.4.29</div>
+                        <div className="noticeDate2">2000.4.29</div>
                     </div>
                     <div className="star">중요</div>
                 </div>

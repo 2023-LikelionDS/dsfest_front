@@ -183,3 +183,9 @@ ul.pagination li a.active {
     margin-top: 20px;
     align-self: flex-end;
 }
+
+.noticeDate2 {
+    color: grey;
+    font-size: small;
+    margin-top: 5px;
+}
