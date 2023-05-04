@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import '../../css/EventPage.css';
 
 function EventForm() {
+    const [content, setContent] = useState('');
+
+    const handleSubmit = (e) => {
+        const newNangman = { content: content };
+
+        axios
+            .post('http://localhost:8000/review/', newNangman)
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.log(error.response.data);
+            });
+    };
     return (
         <div className="sectionbody2">
             <div className="detailsection">
@@ -28,8 +43,14 @@ function EventForm() {
                 </div>
             </div>
             <div className="formsection">
-                <form className="form_inner">
-                    <input className="form_writer" placeholder="이름"></input>
+                <form className="form_inner" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                        className="form_writer"
+                        placeholder="이름"
+                    ></input>
                     <textarea
                         className="insert"
                         placeholder="나에게 낭만이란?"
