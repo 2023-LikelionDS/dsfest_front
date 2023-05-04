@@ -83,7 +83,11 @@ function NoticeDetail() {
                             </div>
                         )}
                     </div>
-                    <div className="star">중요</div>
+                    {detail.pinned_order !== 0 || '' ? (
+                        <div className="star">중요</div>
+                    ) : (
+                        <div className="noStar"></div>
+                    )}
                 </div>
                 <div className="detailContent">{detail.body}</div>
                 <div className="goList" onClick={onClickToList} ref={bodyRef}>
