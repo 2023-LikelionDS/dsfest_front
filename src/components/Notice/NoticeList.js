@@ -44,7 +44,7 @@ function NoticeList() {
 
     const onClickToDetail = (id) => {
         window.location.href = `/detail/${id}`;
-        // 나중에 id 값 추가
+
     };
     */
     return (
@@ -85,7 +85,11 @@ function NoticeList() {
                                             <div className="noticeDate">
                                                 {review.created.slice(5, 10)}
                                             </div>
-                                            <div className="star">중요</div>
+                                            {review.pinned_order !== 0 || '' ? (
+                                                <div className="star">중요</div>
+                                            ) : (
+                                                <div className="noStar"></div>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
@@ -112,7 +116,11 @@ function NoticeList() {
                                             <div className="noticeDate">
                                                 {review.created.slice(5, 10)}
                                             </div>
-                                            <div className="star">중요</div>
+                                            {review.pinned_order !== 0 || '' ? (
+                                                <div className="star">중요</div>
+                                            ) : (
+                                                <div className="noStar"></div>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
