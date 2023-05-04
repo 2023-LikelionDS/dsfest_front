@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../../css/EventPage.css';
 
 function EventForm() {
+    /*
     const [content, setContent] = useState('');
 
     const handleSubmit = (e) => {
@@ -17,9 +18,10 @@ function EventForm() {
                 console.log(error.response.data);
             });
     };
+    */
     return (
         <div className="sectionbody2">
-            <div className="detailsection">
+            {/* <div className="detailsection">
                 <div className="subtitle1">
                     <p>여러분의 낭만은</p> <p>무엇인가요?</p>
                 </div>
@@ -60,7 +62,7 @@ function EventForm() {
                     </button>
                 </form>
                 <p>*댓글은 수정, 삭제가 불가합니다.</p>
-            </div>
+            </div> */}
         </div>
     );
 }
