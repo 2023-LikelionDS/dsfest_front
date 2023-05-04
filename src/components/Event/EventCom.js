@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../../css/EventPage.css';
 
 function EventCom() {
+    /*
     const [nangmans, setNangmans] = useState([]);
 
     useEffect(() => {
@@ -15,9 +16,11 @@ function EventCom() {
                 console.log(error.response.data);
             });
     }, []);
+    */
+
     return (
         <div className="sectionbody3">
-            <div className="detailsection">
+            {/* <div className="detailsection">
                 <div className="subtitle1">덕우들의 낭만</div>
             </div>
             <div className="commentsection">
@@ -56,7 +59,7 @@ function EventCom() {
                         </div>
                     ))}
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
 }
