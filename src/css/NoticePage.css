@@ -8,6 +8,7 @@
 .insertBody {
     background-color: #fff8fb;
     display: flex;
+
     flex-direction: column;
     align-items: center;
 }
@@ -18,6 +19,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 20px 0 20px;
+    text-align: center;
 }
 .noticeCount {
     font-weight: bold;
@@ -25,10 +27,32 @@
     margin-left: 10px;
 }
 
+.noNotice {
+    margin-top: 30vh;
+    font-weight: bold;
+    color: grey;
+}
+
+.row {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 20px;
+}
 .col {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 150px;
 }
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
 .noticeImg {
     background-color: grey;
     width: 150px;
@@ -39,25 +63,20 @@
 }
 
 .noticeTitle {
+    width: 150px;
     font-weight: bold;
-    display: flex;
-    justify-content: space-evenly;
-
-    @media (min-width: 768px) {
-        justify-content: space-between;
-    }
+    text-align: start;
 }
-
+.invTitle {
+    visibility: hidden;
+}
 .bottomC {
     margin-top: 7px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 10px;
     align-content: baseline;
-
-    @media (min-width: 768px) {
-        justify-content: space-between;
-    }
+    width: 150px;
 }
 
 .noticeDate {
@@ -68,17 +87,24 @@
 .star {
     color: white;
     background-color: #e25959;
+    font-size: small;
+    padding: 4px;
+    border-radius: 4px;
+    align-self: self-end;
+}
+
+.noStar {
     font-size: x-small;
     padding: 4px;
     border-radius: 4px;
+    align-self: self-end;
 }
 
 /* pagination css */
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 ul {
@@ -140,6 +166,22 @@ ul.pagination li a.active {
 
 /* NoticeDetail css*/
 
+@media (min-width: 768px) {
+    .insertBody2 {
+        margin: 0 auto;
+        width: 375px;
+
+        background-color: #fff8fb;
+    }
+}
+.insertBody2 {
+    background-color: #fff8fb;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+
 .detailCotainer {
     display: flex;
     flex-direction: column;
@@ -189,4 +231,10 @@ ul.pagination li a.active {
     color: grey;
     font-size: small;
     margin-top: 5px;
+}
+
+.slickP {
+    width: 310px;
+    height: 310px;
+    margin-bottom: 10px;
 }

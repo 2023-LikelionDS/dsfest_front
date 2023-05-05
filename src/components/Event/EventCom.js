@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
 import '../../css/EventPage.css';
 
 function EventCom() {
+    /*
+    const [nangmans, setNangmans] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get('http://localhost:8000/review/')
+            .then((response) => {
+                setNangmans(response.data);
+            })
+            .catch((error) => {
+                console.log(error.response.data);
+            });
+    }, []);
+    */
+
     return (
         <div className="sectionbody3">
-            <div className="detailsection">
+            {/* <div className="detailsection">
                 <div className="subtitle1">덕우들의 낭만</div>
             </div>
             <div className="commentsection">
@@ -35,7 +51,15 @@ function EventCom() {
                     노름으로 죄다 잃고 가족이라곤
                 </div>
                 <div className="line3"></div>
-            </div>
+                <ul>
+                    {nangmans.map((review) => (
+                        <div className="comment" nakey={review.id}>
+                            <li>{review.content}</li>
+                            <div className="line3"></div>
+                        </div>
+                    ))}
+                </ul>
+            </div> */}
         </div>
     );
 }
