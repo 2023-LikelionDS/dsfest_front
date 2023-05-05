@@ -4,6 +4,7 @@ import Main from './pages/Main';
 import Event from './pages/EventPage';
 import Notice from './pages/NoticePage';
 import Detail from './components/Notice/NoticeDetail';
+import Splash from './components/Splash/Splash';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/event" element={<Event />} />
                     <Route path="/notice" element={<Notice />} />
                     <Route path="/detail" element={<Detail />} />
+                    <Route path="/splash" element={<Splash />} />
                 </Routes>
             </>
         </BrowserRouter>
