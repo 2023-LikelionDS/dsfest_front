@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-grid-system';
 //import axios from 'axios';
 import '../../css/NoticePage.css';
-
+//import default_img from '../../img/default_image.jpg';
 //import Pagination from 'react-js-pagination';
 
 function NoticeList() {
@@ -76,10 +76,18 @@ function NoticeList() {
                                             onClickToDetail(review.id)
                                         }
                                     >
-                                        <img
-                                            src={review.images[0].image}
-                                            className="noticeImg"
-                                        />
+                                        {review.images.length !== 0 ? (
+                                            <img
+                                                src={review.images[0].image}
+                                                className="noticeImg"
+                                            />
+                                        ) : (
+                                            <img
+                                                src={default_img}
+                                                className="noticeImg"
+                                            ></img>
+                                        )}
+
                                         <div className="noticeTitle">
                                             <div>{review.title}</div>
                                             <div className="invTitle">
@@ -111,10 +119,17 @@ function NoticeList() {
                                             onClickToDetail(review.id)
                                         }
                                     >
-                                        <img
-                                            src={review.images[0].image}
-                                            className="noticeImg"
-                                        />
+                                        {review.images.length !== 0 ? (
+                                            <img
+                                                src={review.images[0].image}
+                                                className="noticeImg"
+                                            />
+                                        ) : (
+                                            <img
+                                                src={default_img}
+                                                className="noticeImg"
+                                            ></img>
+                                        )}
                                         <div className="noticeTitle">
                                             <div>{review.title}</div>
                                         </div>

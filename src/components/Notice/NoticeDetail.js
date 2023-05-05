@@ -6,7 +6,7 @@ import styled from 'styled-components';
 //import 'slick-carousel/slick/slick.css';
 //import 'slick-carousel/slick/slick-theme.css';
 //import Slider from 'react-slick';
-
+//import default_img from '../../img/default_image.jpg';
 /*
 const NoticeImg = styled.img`
     width: 310px;
@@ -68,9 +68,13 @@ function NoticeDetail() {
             {/* <div className="detailCotainer">
                 <div className="notice">공지사항</div>
                 <Slider {...settings}>
-                    {(detail.images || []).map((review) => (
-                        <NoticeImg src={review.image} />
-                    ))}
+                     {detail.images && detail.images.length > 0 ? (
+                        detail.images.map((review) => (
+                            <NoticeImg src={review.image} />
+                        ))
+                    ) : (
+                        <NoticeImg src={default_img} />
+                    )}
                 </Slider>
 
                 <div className="detailC1">
