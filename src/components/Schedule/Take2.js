@@ -77,7 +77,7 @@ function Take1() {
     return (
         <>
             <Title>
-                <Num>1</Num>
+                <Num>2</Num>
                 <TitleText>TAKE1:진실은 언제나 하나!</TitleText>
             </Title>
 
