@@ -73,7 +73,7 @@ const Caption = styled.div`
     text-align: center;
     line-height: 25px;
 `;
-function Take1() {
+function Take2() {
     return (
         <>
             <Title>
@@ -122,4 +122,4 @@ function Take1() {
         </>
     );
 }
-export default Take1;
+export default Take2;
