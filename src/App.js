@@ -7,6 +7,7 @@ import Detail from './components/Notice/NoticeDetail';
 import Splash from './components/Splash/Splash';
 import Review from './pages/ReviewPage';
 import WriteReview from './pages/WriteReviewPage';
+import Schedule from './pages/SchedulePage';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/splash" element={<Splash />} />
                     <Route path="/review" element={<Review />} />
                     <Route path="/write" element={<WriteReview />} />
+                    <Route path="/schedule" element={<Schedule />} />
                 </Routes>
             </>
         </BrowserRouter>
