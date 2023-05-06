@@ -45,12 +45,13 @@
 #obj {
     margin-top: 80%;
     margin-right: 5%;
-    width: 445px;
+    width: 120%;
     z-index: 1;
 }
 #roundback {
     position: absolute;
     top: 45%;
+    width: 120%;
     z-index: 0;
 }
 /*두번째 페이지 요소 위치 설정*/
