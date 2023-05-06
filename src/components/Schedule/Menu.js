@@ -1,9 +1,10 @@
 import '../../css/Schedule.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Take1 from './Take1';
 import Take2 from './Take2';
 import Take3 from './Take3';
 function Menu() {
+    const [status, setStatus] = useState(1);
     useEffect(() => {
         const indicator = document.querySelector('.nav-indicator');
         const items = document.querySelectorAll('.nav-item');
@@ -34,19 +35,32 @@ function Menu() {
     return (
         <>
             <nav className="nav">
-                <div className="nav-item" data-active-color="gold">
+                <div
+                    className="nav-item"
+                    data-active-color="gold"
+                    onClick={() => setStatus(1)}
+                >
                     TAKE 1:
                 </div>
-                <div className="nav-item" data-active-color="plum">
+                <div
+                    className="nav-item"
+                    data-active-color="lightcoral"
+                    onClick={() => setStatus(2)}
+                >
                     TAKE 2:
                 </div>
-                <div className="nav-item" data-active-color="skyblue">
+                <div
+                    className="nav-item"
+                    data-active-color="skyblue"
+                    onClick={() => setStatus(3)}
+                >
                     TAKE 3:
                 </div>
                 <span className="nav-indicator"></span>
             </nav>
-            <Take1 />
-            <Take3 />
+            {status === 1 && <Take1 />}
+            {status === 2 && <Take2 />}
+            {status === 3 && <Take3 />}
         </>
     );
 }

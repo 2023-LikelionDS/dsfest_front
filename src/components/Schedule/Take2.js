@@ -1,4 +1,4 @@
-import poster from '../../img/take1.png';
+import poster from '../../img/take2.png';
 import styled from 'styled-components';
 
 const Title = styled.div`
@@ -10,7 +10,7 @@ const Title = styled.div`
     width: 250px;
 `;
 const Num = styled.div`
-    background-color: gold;
+    background-color: lightcoral;
     color: #fff;
     font-weight: 700;
     border-radius: 15%;
@@ -78,7 +78,7 @@ function Take2() {
         <>
             <Title>
                 <Num>2</Num>
-                <TitleText>TAKE1:진실은 언제나 하나!</TitleText>
+                <TitleText>TAKE2:무한한 공간 저 너머로</TitleText>
             </Title>
 
             <Poster src={poster} />
