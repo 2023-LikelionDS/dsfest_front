@@ -1,14 +1,19 @@
 import React, {useState} from 'react';
-import { NavLink } from "react-router-dom";
 import '../css/WriteReviewPage.css'
-import back from "../img/back_arrow.png";
+import { useNavigate } from "react-router-dom";
+import back from "../img/back_purple.png";
 
 function WriteReviewPage() {
+    const navigate = useNavigate();
     // const [review, setReview] = useState('');
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
         setIsClicked(!isClicked);
+      };
+
+      const navigateToPurchase = () => {
+        navigate("/review");
       };
 
     //api 연결 부분
@@ -19,9 +24,7 @@ function WriteReviewPage() {
     return (
     <div className="writeReview">
         <div className="write-top">
-            <NavLink to={'/review'} className="back-arrow">
-                <img src={back} alt="뒤로" width="20px" height="20px"/>
-            </NavLink>
+            <img src={back} alt="뒤로" width="20px" height="20px" className="back-arrow" onClick={navigateToPurchase}/>
             <div className="write-title">상영작 후기</div>
         </div>
 
