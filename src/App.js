@@ -18,7 +18,7 @@ function App() {
                     <Route exact path="/" element={<Main />} />
                     <Route path="/event" element={<Event />} />
                     <Route path="/notice" element={<Notice />} />
-                    <Route path="/detail" element={<Detail />} />
+                    <Route path="/detail/:id" element={<Detail />} />
                     <Route path="/splash" element={<Splash />} />
                     <Route path="/review" element={<Review />} />
                     <Route path="/write" element={<WriteReview />} />
