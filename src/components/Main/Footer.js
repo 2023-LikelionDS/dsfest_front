@@ -60,7 +60,7 @@ function Footer() {
                             <li>이서진</li>
                             <li>장소영</li>
                             <li>한진경</li>
-                            <li>허은</li>
+                            <li>허 은</li>
                         </ul>
                     </ul>
                 </div>
